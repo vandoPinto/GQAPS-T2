@@ -1,0 +1,110 @@
+<div style="height: 60px; width: 100%; background-color: #a9e5ea;">
+    <img style="height: 60px; width: 460px; position: absolute; right: 0px;" src="recursos/imgs/H1.png">
+    <p style="position: absolute;color: #294666;margin-left: 43px;margin-top: 26px;font-size: 12px;">TÓPICO<strong>
+            2</strong></p>
+    <p
+        style="position: absolute;font: normal normal normal 11px/15px Poppins;letter-spacing: 0px;color: #294666;margin-left: 112px;margin-top: 17px;width: 590px;">
+        NECESSIDADES DO TERRITÓRIO E USUÁRIO COMO<br> NORTEADOR DA ORGANIZAÇÃO DO PROCESSO DE TRABALHO</p>
+</div>
+<div>
+    <div style="display: flex;">
+        <div style="width: 368px;margin-left: 41px;margin-top: 108px;">
+            <p>Nesse processo, os elementos apreendidos no encontro trabalhador-usuário, por meio da clínica
+                ampliada,
+                têm como um dos objetivos a construção de um projeto terapêutico, visando qualificar a atenção ao
+                usuário pela coordenação do cuidado e integralidade das ações. </p>
+            <p>Clique na imagem e conheça o que é projeto terapêutico singular.</p>
+        </div>
+        <div class="animate__animated animate__backInRight">
+            <img id="botao_1" src="recursos/imgs/img-slide-52.jpg"
+                style="width: 400px; margin-left: 33px; margin-top: 57px; cursor: pointer;">
+            <p style="font: normal normal normal 10px/30px Poppins;margin-left: 243px;color: #101010;">Foto: Matheus
+                Oliveira/Agência Saúde</p>
+        </div>
+        <div>
+            <div class="jan" id="janela_1" style="cursor: pointer; display: none;">
+                <div
+                    style="width: 890px;height: 379px;background: #1B8992 0% 0% no-repeat padding-box;border-radius: 10px;display: flex;position: absolute;top: 75px;left: 0px;align-items: center;justify-content: space-evenly;color: white;">
+                    <div style="width: 855px;">
+                        <p>
+                            O projeto terapêutico é um movimento de coprodução e cogestão do processo terapêutico de
+                            indivíduos ou família em situação de vulnerabilidade, desenvolvido pela equipe de
+                            assistência
+                            com a participação do usuário, e tem como objetivo ajudar o indivíduo a restabelecer
+                            relações
+                            afetivas e sociais, reconquistar direitos e poder, entre outros (OLIVEIRA, 2008).
+                        </p>
+                        <p>
+                            O projeto
+                            terapêutico singular (PTS) é um processo construído, reconstruído, repensado,
+                            redimensionado
+                            em
+                            relação a usuários, familiares e equipe de saúde. Ele funciona como dispositivo de
+                            integração e
+                            organização de equipes de profissionais da saúde e favorece a consolidação dos atributos
+                            essenciais da APS, a coordenação do cuidado, a longitudinalidade e a integralidade. Além
+                            disso,
+                            à medida que proporciona a inclusão da família, reconhece a importância da composição e
+                            das
+                            relações parentais no processo saúde-doença e das demais singularidades que permeiam a
+                            vida
+                            do
+                            indivíduo e fortalece a integração dos atributos derivados, tais como orientação
+                            familiar,
+                            comunitária e competência cultural, favorecendo a organização da APS para apresentação
+                            de
+                            resultados mais eficientes.
+                        </p>
+                        <p>
+                            A elaboração do PTS deve seguir uma metodologia envolvendo todos os
+                            profissionais e os usuários, sendo que os problemas a serem trabalhados devem ser
+                            eleitos
+                            pela
+                            equipe com a participação do usuário, uma vez que este se torna o centro do cuidado e
+                            envolvê-lo
+                            nas decisões favorece a sua autonomia e a sua corresponsabilidade na pactuação das metas
+                            e
+                            permite a integração das suas singularidades do processo. Nessa perspectiva, Oliveira
+                            (2007)
+                            destaca que não há saberes maiores ou menores, superiores ou inferiores, mais ou menos
+                            importantes, apenas diferentes.
+                        </p>
+                    </div>
+                    <p
+                        style="font: normal normal normal 14px/18px Poppins;letter-spacing: 0px;color: white;position: absolute;top: -9px;left: 868px;">
+                        x</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #CEE4F1;">
+    <div style="margin-top: -8px;display: flex;margin-left: 42px;">
+        <p style="color: #294666;font-size: 11px;">GESTÃO DA QUALIDADE NA APS</p>
+    </div>
+</footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

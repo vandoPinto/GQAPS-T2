@@ -1,0 +1,99 @@
+<div style="height: 60px; width: 100%; background-color: #a9e5ea;">
+    <img style="height: 60px; width: 460px; position: absolute; right: 0px;" src="recursos/imgs/H1.png">
+    <p style="position: absolute;color: #294666;margin-left: 43px;margin-top: 26px;font-size: 12px;">TÓPICO<strong>
+            2</strong></p>
+    <p
+        style="position: absolute;font: normal normal normal 11px/15px Poppins;letter-spacing: 0px;color: #294666;margin-left: 112px;margin-top: 17px;width: 590px;">
+        NECESSIDADES DO TERRITÓRIO E USUÁRIO COMO<br> NORTEADOR DA ORGANIZAÇÃO DO PROCESSO DE TRABALHO</p>
+</div>
+<div>
+    <div style="display: flex;">
+        <div style="width: 404px;margin-left: 41px;margin-top: 126px;">
+            <p>O conhecimento sobre a situação de saúde e seus determinantes e condicionantes é fundamental, pois
+                esse é
+                um dos principais desafios para a gestão dos sistemas de saúde. </p>
+            <p>Clique na imagem e conheça mais sobre a territorialização.</p>
+        </div>
+        <div class="animate__animated animate__backInRight">
+            <img id="botao_1" src="recursos/imgs/img-slide-7.jpg"
+                style="width: 400px; margin-right: 38px; margin-top: 57px; cursor: pointer;">
+            <p style="font: normal normal normal 10px/30px Poppins;margin-left: 210px;color: #101010;">Foto: Matheus
+                Oliveira/Agência Saúde</p>
+        </div>
+        <div>
+            <div class="jan" id="janela_1">
+                <div
+                    style="width: 890px;height: 379px;background: #1B8992 0% 0% no-repeat padding-box;border-radius: 10px;display: flex;position: absolute;top: 72px;left: 0px;align-items: center;justify-content: space-evenly;color: white;">
+                    <div style="width: 855px;">
+                        <p>A análise da situação de saúde é o período no qual você e a equipe sistematizam os dados
+                            coletados na territorialização e transformam em informação para análise e planejamento
+                            das
+                            ações. Com isso, é possível identificar necessidades, priorização de saúde,
+                            retroalimentação
+                            de sistemas, monitoramento da efetividade das intervenções etc.</p>
+                        <p>
+                            Você e sua equipe já
+                            analisaram os indicadores de saúde da área adscrita à UBS?
+                        </p>
+                        <p>
+                            Analisaram o perfil
+                            epidemiológico do território?
+                        </p>
+
+                        <p>Quais as características encontradas? </p>
+                        <p>
+                            Perfil semelhante ao do
+                            país ou do Distrito Federal?
+                        </p>
+                        <p>
+                            Quais eventos relacionados à saúde estão distribuídos no
+                            território?
+                        </p>
+                        <p>Os casos de determinado agravo estão concentrados no território? Por quê? </p>
+                        <p>
+                            Na
+                            prática, além da reflexão relativa aos aspectos de infraestrutura, políticos,
+                            demográficos,
+                            epidemiológicos da população, torna-se necessária a análise assistencial relativa ao
+                            acesso
+                            à UBS.
+                        </p>
+                    </div>
+                    <p
+                        style="font: normal normal normal 14px/18px Poppins;letter-spacing: 0px;color: white;position: absolute;top: -9px;left: 868px;">
+                        x</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #CEE4F1;">
+    <div style="margin-top: -8px;display: flex;margin-left: 42px;">
+        <p style="color: #294666;font-size: 11px;">GESTÃO DA QUALIDADE NA APS</p>
+    </div>
+</footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
